@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  font-family: "Roboto", sans-serif;
+  --bg-color: hsla(0, 0%, 100%, 1);
+  --color: hsla(240, 6%, 21%, 1);
+  --color-selected: hsla(0, 0%, 100%, 1);;
+  --button-bg: hsla(240, 9%, 89%, 1);
+  --button-bg-selected: hsla(194, 97%, 31%, 1);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+body {
+  background: var(--bg-color);
+
+  display: grid;
+  grid-template-columns: 32.5rem 30.8rem;
+  gap: 19.2rem;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+}
+
+#leftSection {
+  display: grid;
+  grid-template-columns: 32.5rem;
+  gap: 1.7rem;
+  place-content: center;
+  text-align: center;
+}
+
+.timer span {
+  color: var(--color);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+.timerButtons {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+
+  color: var(--color);
+  display: flex;
+  gap: 4rem;
+
+  justify-content: center;
+}
+
+#rightSection {
+  display: grid;
+  grid-template-columns: 13.8rem 13.8rem;
+  gap: 3.2rem;
+}
+
+
+.ph-bold {
+  font-size: 4.8rem;
+  cursor: pointer;
+}
+
+.mood svg{
+  fill: var(--color);
+  background-color: var(--button-bg);
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+
+  cursor: pointer;
+}
+
+.selected svg{
+  fill: var(--color-selected);
+  background-color: var(--button-bg-selected);
+
+}
+
+.isRunning {
+  display: none;
+}
