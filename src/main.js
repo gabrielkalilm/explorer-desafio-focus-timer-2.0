@@ -136,8 +136,10 @@ plusButton.addEventListener('click', (event) =>{
 })
 
 minusButton.addEventListener('click', (event) =>{
-  displayMin = Number(displayMin) - 5
+  if(displayMin >= 5) 
+  {displayMin = Number(displayMin) - 5
   updateDisplay(displayMin, displaySec)
+  }
 })
 
 /* countDown*/
